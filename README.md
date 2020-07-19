@@ -5,3 +5,28 @@
 PEP 622: https://www.python.org/dev/peps/pep-0622
 
 Source is fetched from https://github.com/brandtbucher/cpython
+
+# Example
+
+*example1.py*:
+```
+from dataclasses import dataclass
+
+@dataclass
+class A:
+    x: int
+    y: int
+
+a = A(10, 20)
+
+match a:
+    case A(x, y):
+        print(f'A({x}, {y})')
+    case _:
+        print('Something else')
+```
+
+In terminal run:
+```
+docker run -it -v $PWD:/code mtasic85/cpython-3.10.0-alpha-0:latest python example1.py
+```

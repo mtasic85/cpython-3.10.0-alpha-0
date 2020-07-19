@@ -11,4 +11,6 @@ WORKDIR /
 RUN rm -r /root/cpython-patma
 RUN ln -s /usr/local/bin/python3.10 /usr/local/bin/python
 RUN ln -s /usr/local/bin/python3.10-config /usr/local/bin/python-config
+VOLUME /code
+WORKDIR /code
 CMD ["python"]
