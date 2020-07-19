@@ -10,7 +10,7 @@ PEP 622: https://www.python.org/dev/peps/pep-0622
 ## Class Pattern
 
 *example1.py*:
-```
+```python
 from dataclasses import dataclass
 
 @dataclass
@@ -28,7 +28,7 @@ match a:
 ```
 
 In terminal run:
-```
+```bash
 docker run -it -v $PWD:/code mtasic85/cpython-3.10.0-alpha-0:latest python example1.py
 ```
 
@@ -41,7 +41,7 @@ A(10, 20)
 ## Error Handling 
 
 *example2.py*:
-```
+```python
 ...
 
 #
@@ -75,7 +75,7 @@ match r1:
 ```
 
 In terminal run:
-```
+```bash
 docker run -it -v $PWD:/code mtasic85/cpython-3.10.0-alpha-0:latest python example2.py
 ```
 
