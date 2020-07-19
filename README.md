@@ -4,8 +4,6 @@
 
 PEP 622: https://www.python.org/dev/peps/pep-0622
 
-Source is fetched from https://github.com/brandtbucher/cpython
-
 
 # Examples
 
