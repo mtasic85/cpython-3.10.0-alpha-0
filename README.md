@@ -6,7 +6,10 @@ PEP 622: https://www.python.org/dev/peps/pep-0622
 
 Source is fetched from https://github.com/brandtbucher/cpython
 
-# Example
+
+# Examples
+
+## Class Pattern
 
 *example1.py*:
 ```
@@ -34,4 +37,52 @@ docker run -it -v $PWD:/code mtasic85/cpython-3.10.0-alpha-0:latest python examp
 Output:
 ```
 A(10, 20)
+```
+
+
+## Error Handling 
+
+*example2.py*:
+```
+...
+
+#
+# user code
+#
+@wrap_result
+def f1(x: Union[int, float], y: Union[int, float]) -> float:
+    return x / y
+
+#
+# ok
+#
+r0: Result[float] = f1(1, 2)
+
+match r0:
+    case Ok(v):
+        print(f'r0 Ok v: {v}')
+    case Err(e):
+        print(f'r0 Err e: {e}')
+
+#
+# err
+#
+r1: Result[float] = f1(1, 0)
+
+match r1:
+    case Ok(v):
+        print(f'r1 Ok v: {v}')
+    case Err(e):
+        print(f'r1 Err e: {e}')
+```
+
+In terminal run:
+```
+docker run -it -v $PWD:/code mtasic85/cpython-3.10.0-alpha-0:latest python example2.py
+```
+
+Output:
+```
+r0 Ok v: 0.5
+r1 Err e: division by zero
 ```
