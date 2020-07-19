@@ -30,3 +30,8 @@ In terminal run:
 ```
 docker run -it -v $PWD:/code mtasic85/cpython-3.10.0-alpha-0:latest python example1.py
 ```
+
+Output:
+```
+A(10, 20)
+```
