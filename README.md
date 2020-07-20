@@ -1,8 +1,9 @@
 # Python 3.10 alpha 0
 
-*Python 3.10 alpha 0* with *PEP 622* implementation. This is good start, if you would like to test Python with *Structural Pattern Matching* using *match* and *case* keywords. Once Python 3.10 is officially published, this build will become obsolete and whould not be used in production. Anyway, do not use this version in production.
+*Python 3.10 alpha 0* with *PEP 622* implementation. This is good start, if you would like to test Python with *Structural Pattern Matching* using *match* and *case* keywords. All credits go to original authors. Since this is not a production ready project and will eventually die once PEP 622 is integrated into CPython repo, on purpose I named it _cpython-3.10.0-alpha-0_ as distraction.
 
 PEP 622: https://www.python.org/dev/peps/pep-0622
+PEP 622 implementation: https://github.com/brandtbucher/cpython
 
 
 # Examples
