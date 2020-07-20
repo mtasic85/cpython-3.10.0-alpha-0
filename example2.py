@@ -1,7 +1,7 @@
 from copy import deepcopy
+from functools import wraps
 from dataclasses import dataclass
 from typing import TypeVar, Union, Callable
-
 #
 # Result / Ok / Err
 #
@@ -47,6 +47,7 @@ class Err(Result):
 
 
 def wrap_result(f: Callable) -> Callable:
+    @wraps(f)
     def wrapper(*args, **kwargs) -> Result[T]:
         r: Result[T]
 
